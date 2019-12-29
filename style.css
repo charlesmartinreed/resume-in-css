@@ -1,0 +1,159 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --ff-main-header: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+  --letter-spacing-main: 0.3rem;
+  --letter-spacing-sub: 0.25rem;
+}
+
+body {
+  font-family: var(--ff-main-header);
+  background-color: rgb(230, 230, 252);
+}
+
+/* HEADER CONTAINER */
+
+.container__header {
+  margin-top: 1.5rem;
+  width: 100%;
+  min-height: 200px;
+  background: #333;
+  font-family: var(--ff-main-header);
+  letter-spacing: var(--letter-spacing-main);
+  line-height: 1.2rem;
+  z-index: -1;
+}
+
+.container__header h1,
+.container__header p {
+  width: 70%;
+  font-size: 3rem;
+  margin-left: auto;
+  padding: 1.6rem;
+  text-transform: uppercase;
+  /* background-color: red; */
+  text-align: right;
+}
+
+.container__header p {
+  font-size: 1.3rem;
+  letter-spacing: var(--letter-spacing-sub);
+}
+
+/* SKILLS CONTAINER */
+.container__skills {
+  background: skyblue;
+  min-height: 150%;
+  min-width: 30%;
+  max-width: 30%;
+  z-index: 20;
+  position: absolute;
+  top: 0%;
+  left: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.container__skills img {
+  height: 125px;
+  width: auto;
+  object-fit: contain;
+  transform: rotate(180deg);
+}
+
+.container__skills .skills-header {
+  background-color: #333;
+  padding: 1rem;
+  color: white;
+  font-size: 1.1rem;
+  font-family: var(--ff-main-header);
+  font-weight: 600;
+  letter-spacing: var(--letter-spacing-sub);
+  text-transform: uppercase;
+  width: 85%;
+  text-align: center;
+}
+
+.container__skills .skill-list {
+  list-style-type: none;
+}
+
+.container__skills .skills-graph p {
+  margin-bottom: 0.3rem;
+}
+
+.container__skills .skill-list-item {
+  padding: 0.7rem;
+}
+
+.container__employment {
+  min-width: calc(70% - 1.6rem);
+  max-width: calc(70% - 1.6rem);
+  padding: 1rem;
+  margin-left: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.container__employment .employment-header {
+  background-color: #333;
+  padding: 1rem;
+  color: white;
+  font-size: 1.1rem;
+  font-family: var(--ff-main-header);
+  font-weight: 600;
+  letter-spacing: var(--letter-spacing-sub);
+  text-transform: uppercase;
+  width: 85%;
+  text-align: center;
+}
+
+.container__employment .profile-text {
+  margin: 1.5rem 0;
+}
+
+.container__employment p {
+  width: 90%;
+  line-height: 1.7rem;
+  margin-bottom: 1.5rem;
+}
+
+.container__employment .employment-title-element {
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.02rem;
+  font-size: 1.4rem;
+  margin-top: 1rem;
+}
+
+.container__employment .employment-dates-graph {
+  text-align: center;
+  margin-top: -0.3rem;
+  font-weight: 400;
+}
+
+.container__employment .employment-duties-list {
+  list-style-type: none;
+  width: 90%;
+  margin-bottom: 2rem;
+}
+
+.container__employment .employment-duties-list .employment-duty-list-item {
+  margin: 1rem;
+}

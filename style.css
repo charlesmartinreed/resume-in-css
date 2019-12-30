@@ -68,7 +68,7 @@ body {
 /* SKILLS CONTAINER */
 .container__skills {
   background-color: rgb(172, 64, 64);
-  min-height: 80%;
+  min-height: 90%;
   min-width: 30%;
   max-width: 30%;
   z-index: 20;
@@ -80,7 +80,7 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: flex-start;
-  /* padding-top: 1rem; */
+  padding: 1.5rem 0;
 
   box-shadow: 0 0 2em rgba(0, 0, 0, 0.3);
 }
@@ -98,7 +98,7 @@ body {
   object-fit: contain;
   transform: rotate(90deg);
   box-shadow: 0 0 3em rgba(0, 0, 0, 0.3);
-  margin: 0 auto;
+  margin: 1.5rem auto;
 }
 
 .container__skills .skills-header {
@@ -132,12 +132,42 @@ body {
   list-style-type: none;
 }
 
-.container__skills .skills-graph p {
-  margin-bottom: 0.3rem;
+.container__skills .skills-graph p:first-of-type {
+  font-weight: 500;
+  line-height: 1.4rem;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+
+  margin-top: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.container__skills .skills-graph p:not(:first-of-type) {
+  font-size: 1.1rem;
+  margin-left: 2rem;
+}
+
+.container__skills .skills-graph p:last-of-type {
+  margin-bottom: 0.6rem;
 }
 
 .container__skills .skill-list-item {
-  padding: 0.3rem;
+  padding: 0.3rem 0;
+}
+
+.container__skills .skill-list-hard,
+.container__skills .skill-list-professional {
+  font-weight: 500;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.container__skills .skill-list-item .skill-supplementary {
+  padding-left: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: rgba(16, 16, 51, 1);
 }
 
 .container__skills .skill-list-item a {
@@ -202,6 +232,12 @@ body {
   letter-spacing: 0.02rem;
   font-size: 1.4rem;
   margin-top: 1rem;
+}
+
+.container__employment .employment-title-element span {
+  color: rgb(92, 2, 92);
+  font-weight: 900;
+  font-size: 2rem;
 }
 
 .container__employment .employment-dates-graph {

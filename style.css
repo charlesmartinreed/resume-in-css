@@ -9,6 +9,7 @@
 :root {
   --ff-main-header: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --ff-color-black: rgb(32, 32, 32);
 
   --letter-spacing-main: 0.3rem;
   --letter-spacing-sub: 0.25rem;
@@ -17,6 +18,9 @@
 body {
   font-family: var(--ff-main-header);
   background-color: rgb(230, 230, 252);
+  color: var(--ff-color-black);
+  /* width: 90%; */
+  position: relative;
 }
 
 /* HEADER CONTAINER */
@@ -25,15 +29,23 @@ body {
   margin-top: 1.5rem;
   width: 100%;
   min-height: 200px;
-  background: #333;
+  background: rgba(16, 16, 51, 0.9);
   font-family: var(--ff-main-header);
   letter-spacing: var(--letter-spacing-main);
   line-height: 1.2rem;
   z-index: -1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  box-shadow: 0 6px 3em rgba(64, 64, 64, 0.8);
+  /* border-bottom: 3px solid rgba(64, 22, 105, 0.2); */
 }
 
 .container__header h1,
 .container__header p {
+  color: rgb(230, 230, 252);
   width: 70%;
   font-size: 3rem;
   margin-left: auto;
@@ -43,15 +55,20 @@ body {
   text-align: right;
 }
 
+.container__header h1 {
+  font-weight: 800;
+}
+
 .container__header p {
   font-size: 1.3rem;
   letter-spacing: var(--letter-spacing-sub);
+  font-weight: 300;
 }
 
 /* SKILLS CONTAINER */
 .container__skills {
-  background: skyblue;
-  min-height: 150%;
+  background-color: rgb(172, 64, 64);
+  min-height: 80%;
   min-width: 30%;
   max-width: 30%;
   z-index: 20;
@@ -62,21 +79,32 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  align-items: center;
-  padding-top: 1rem;
+  align-items: flex-start;
+  /* padding-top: 1rem; */
+
+  box-shadow: 0 0 2em rgba(0, 0, 0, 0.3);
+}
+
+.container__skills div p,
+.container__skills ul {
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-left: 1.5rem;
 }
 
 .container__skills img {
   height: 125px;
   width: auto;
   object-fit: contain;
-  transform: rotate(180deg);
+  transform: rotate(90deg);
+  box-shadow: 0 0 3em rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
 }
 
 .container__skills .skills-header {
-  background-color: #333;
+  background-color: rgb(138, 41, 41);
   padding: 1rem;
-  color: white;
+  color: rgb(230, 230, 252);
   font-size: 1.1rem;
   font-family: var(--ff-main-header);
   font-weight: 600;
@@ -84,6 +112,20 @@ body {
   text-transform: uppercase;
   width: 85%;
   text-align: center;
+  border-radius: 4px;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.3);
+}
+
+.container__skills .physical-contact-info {
+  margin-top: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+
+.container__skills .physical-contact-info p {
+  font-weight: 500;
+  line-height: 1.4rem;
+  text-transform: uppercase;
+  font-size: 1.5rem;
 }
 
 .container__skills .skill-list {
@@ -95,7 +137,25 @@ body {
 }
 
 .container__skills .skill-list-item {
-  padding: 0.7rem;
+  padding: 0.3rem;
+}
+
+.container__skills .skill-list-item a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: rgb(32, 32, 32);
+  transition: all 0.3s ease-in-out;
+}
+
+.container__skills .skill-list-item a:hover {
+  color: rgba(16, 16, 51, 0.9);
+}
+
+.container__skills .skill-list-item i {
+  /* display: block; */
+  padding-right: 1rem;
+  margin-left: 0.5rem;
+  font-size: 2rem;
 }
 
 .container__employment {
@@ -112,16 +172,18 @@ body {
 }
 
 .container__employment .employment-header {
-  background-color: #333;
+  background-color: rgb(172, 64, 64);
   padding: 1rem;
-  color: white;
+  color: rgb(230, 230, 252);
   font-size: 1.1rem;
   font-family: var(--ff-main-header);
   font-weight: 600;
   letter-spacing: var(--letter-spacing-sub);
   text-transform: uppercase;
-  width: 85%;
+  width: 70%;
   text-align: center;
+
+  box-shadow: 0 0 2em rgba(0, 0, 0, 0.3);
 }
 
 .container__employment .profile-text {
@@ -144,8 +206,8 @@ body {
 
 .container__employment .employment-dates-graph {
   text-align: center;
-  margin-top: -0.3rem;
-  font-weight: 400;
+  margin-top: -0.2rem;
+  color: rgba(16, 16, 51, 0.9);
 }
 
 .container__employment .employment-duties-list {

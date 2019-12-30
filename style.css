@@ -273,7 +273,7 @@ body {
   width: calc(100% + 2rem);
   text-align: center;
 
-  box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 2em rgba(0, 0, 0, 0.3);
 }
 
 .container__employment .employment-header span {

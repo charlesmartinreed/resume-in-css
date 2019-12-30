@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900&display=swap");
+
 *,
 *::before,
 *::after {
@@ -7,21 +9,30 @@
 }
 
 :root {
-  --ff-main-header: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --ff-main-text: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --ff-headline-text: "Playfair Display", serif;
   --ff-color-black: rgb(32, 32, 32);
 
-  --letter-spacing-main: 0.3rem;
-  --letter-spacing-sub: 0.25rem;
+  --letter-spacing-main: 0.25rem;
+  --letter-spacing-sub: 0.15rem;
 }
 
 body {
-  font-family: var(--ff-main-header);
+  font-family: var(--ff-main-text);
   background-color: rgb(230, 230, 252);
   color: var(--ff-color-black);
   /* width: 90%; */
   position: relative;
 }
+
+/* CUSTOM LIST TYPE STYLING */
+/* @counter-style thumbs {
+  system: cyclic;
+  symbols: "\1F44D";
+  suffix: " ";
+  pad: 2rem;
+} */
 
 /* HEADER CONTAINER */
 
@@ -30,7 +41,7 @@ body {
   width: 100%;
   min-height: 200px;
   background: rgba(16, 16, 51, 0.9);
-  font-family: var(--ff-main-header);
+  font-family: var(--ff-main-text);
   letter-spacing: var(--letter-spacing-main);
   line-height: 1.2rem;
   z-index: -1;
@@ -50,30 +61,31 @@ body {
   font-size: 3rem;
   margin-left: auto;
   padding: 1.6rem;
-  text-transform: uppercase;
   /* background-color: red; */
   text-align: right;
 }
 
 .container__header h1 {
-  font-weight: 800;
+  font-weight: 700;
+  font-size: 3.2rem;
 }
 
 .container__header p {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   letter-spacing: var(--letter-spacing-sub);
-  font-weight: 300;
+  font-weight: 100;
 }
 
 /* SKILLS CONTAINER */
 .container__skills {
   background-color: rgb(172, 64, 64);
-  min-height: 90%;
+  min-height: 85%;
+  max-height: 85%;
   min-width: 30%;
   max-width: 30%;
   z-index: 20;
   position: absolute;
-  top: 0%;
+  top: -2%;
   left: 2rem;
 
   display: flex;
@@ -106,8 +118,8 @@ body {
   padding: 1rem;
   color: rgb(230, 230, 252);
   font-size: 1.1rem;
-  font-family: var(--ff-main-header);
-  font-weight: 600;
+  font-family: var(--ff-main-text);
+  font-weight: 400;
   letter-spacing: var(--letter-spacing-sub);
   text-transform: uppercase;
   width: 85%;
@@ -117,8 +129,12 @@ body {
 }
 
 .container__skills .physical-contact-info {
-  margin-top: 0.6rem;
-  margin-bottom: 0.6rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.skills-header .skill-list {
+  margin-bottom: 1rem;
 }
 
 .container__skills .physical-contact-info p {
@@ -134,9 +150,9 @@ body {
 
 .container__skills .skills-graph p:first-of-type {
   font-weight: 500;
-  line-height: 1.4rem;
+  line-height: 1.5rem;
   text-transform: uppercase;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 
   margin-top: 0.6rem;
   margin-bottom: 1rem;
@@ -151,16 +167,23 @@ body {
   margin-bottom: 0.6rem;
 }
 
-.container__skills .skill-list-item {
-  padding: 0.3rem 0;
-}
-
 .container__skills .skill-list-hard,
 .container__skills .skill-list-professional {
   font-weight: 500;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   font-size: 1.2rem;
+}
+
+.container__skills .skill-list-soft {
+  margin-top: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+
+.container__skills .skill-list-soft .skill-list-item,
+.container__skills .skill-list-hard .skill-list-item,
+.container__skills .skill-list-professional .skill-list-item {
+  padding: 0.3rem 0;
 }
 
 .container__skills .skill-list-item .skill-supplementary {
@@ -174,17 +197,18 @@ body {
   text-decoration: none;
   font-size: 1rem;
   color: rgb(32, 32, 32);
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .container__skills .skill-list-item a:hover {
-  color: rgba(16, 16, 51, 0.9);
+  color: rgb(92, 2, 92);
 }
 
 .container__skills .skill-list-item i {
   /* display: block; */
   padding-right: 1rem;
   margin-left: 0.5rem;
+  margin-bottom: 0.3rem;
   font-size: 2rem;
 }
 
@@ -204,20 +228,28 @@ body {
 .container__employment .employment-header {
   background-color: rgb(172, 64, 64);
   padding: 1rem;
+  border-radius: 4px;
   color: rgb(230, 230, 252);
-  font-size: 1.1rem;
-  font-family: var(--ff-main-header);
-  font-weight: 600;
+  font-size: 1.3rem;
+  font-family: var(--ff-main-text);
+  font-weight: 400;
   letter-spacing: var(--letter-spacing-sub);
   text-transform: uppercase;
   width: 70%;
-  text-align: center;
+  text-align: right;
 
   box-shadow: 0 0 2em rgba(0, 0, 0, 0.3);
 }
 
 .container__employment .profile-text {
+  font-size: 1.15rem;
+}
+
+.container__employment .profile-text,
+.container__employment .employment-job-desc-graph {
   margin: 1.5rem 0;
+  font-weight: 400;
+  letter-spacing: 0.04rem;
 }
 
 .container__employment p {
@@ -235,7 +267,7 @@ body {
 }
 
 .container__employment .employment-title-element span {
-  color: rgb(92, 2, 92);
+  color: rgba(92, 2, 92, 0.7);
   font-weight: 900;
   font-size: 2rem;
 }
@@ -244,14 +276,35 @@ body {
   text-align: center;
   margin-top: -0.2rem;
   color: rgba(16, 16, 51, 0.9);
+  letter-spacing: 0.06rem;
+}
+
+.container__employment .employment-job-desc-graph {
+  font-size: 1.1rem;
 }
 
 .container__employment .employment-duties-list {
-  list-style-type: none;
-  width: 90%;
+  /* list-style-type: "\1F44D"; */
+  list-style-type: square;
+  width: 85%;
   margin-bottom: 2rem;
+  position: relative;
+  letter-spacing: 0.04rem;
+  line-height: 1.3rem;
 }
 
 .container__employment .employment-duties-list .employment-duty-list-item {
   margin: 1rem;
+}
+
+.container__employment .employment-duties-list::after {
+  position: absolute;
+  bottom: -10%;
+  right: 50%;
+  content: "";
+  background-color: rgba(92, 2, 92, 0.7);
+  height: 5px;
+  width: 50%;
+  border-radius: 3px;
+  transform: translateX(50%);
 }

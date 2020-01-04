@@ -109,13 +109,12 @@ body {
 .container__skills .company-logo {
   height: 220px;
   width: 220px;
-  background-color: rgb(24, 24, 24);
-  /* background-color: rgb(230, 230, 252); */
+  /* background-color: rgb(24, 24, 24); */
+  background-color: rgb(230, 230, 252);
   border-radius: 50%;
   position: relative;
   box-shadow: 0 0 3em rgba(0, 0, 0, 0.4);
   margin: 0 auto;
-  border: 3px solid rgba(230, 230, 252, 0.2);
 }
 
 .container__skills .company-logo span {
@@ -145,7 +144,7 @@ body {
   right: 4%;
   font-size: 9rem;
   color: rgb(16, 16, 51);
-  text-shadow: 0px 8px rgba(230, 230, 252, 0.2);
+  /* text-shadow: 0px 8px rgba(230, 230, 252, 0.7); */
 }
 
 .container__skills .skills-header {
@@ -160,7 +159,7 @@ body {
   width: 85%;
   text-align: left;
   border-radius: 4px;
-  box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 0 1em rgba(0, 0, 0, 0.2); */
 }
 
 .container__skills .physical-contact-info {
@@ -273,7 +272,7 @@ body {
   width: calc(100% + 2rem);
   text-align: center;
 
-  box-shadow: 0 0 2em rgba(0, 0, 0, 0.3);
+  /* box-shadow: 0 0 2em rgba(0, 0, 0, 0.3); */
 }
 
 .container__employment .employment-header span {

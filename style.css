@@ -107,8 +107,8 @@ body {
 }
 
 .container__skills .company-logo {
-  height: 200px;
-  width: 200px;
+  height: 220px;
+  width: 220px;
   /* background-color: rgb(199, 197, 184); */
   background-color: rgb(24, 24, 24);
   background-image: url("./images/me.jpeg");

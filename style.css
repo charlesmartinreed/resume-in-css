@@ -76,6 +76,7 @@ body {
   font-size: 1.7rem;
   font-weight: 200;
   font-style: italic;
+  line-height: 2.1rem;
 }
 
 /* SKILLS CONTAINER */
@@ -112,7 +113,7 @@ body {
   /* background-color: rgb(199, 197, 184); */
   background-color: rgb(24, 24, 24);
   background-image: url("./images/me.jpeg");
-  display: none;
+  /* display: none; */
   background-position: top left;
   background-size: cover;
 
@@ -191,6 +192,11 @@ body {
 
 .container__skills .skill-list {
   list-style-type: none;
+}
+
+.container__skills .skills-graph .edu-details {
+  font-size: 0.9em;
+  font-style: italic;
 }
 
 .container__skills .skills-graph p:first-of-type {
@@ -292,6 +298,12 @@ body {
 
 .container__employment .profile-text {
   font-size: 1.15rem;
+}
+
+.container__employment .profile-text span {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
 }
 
 .container__employment .profile-text,
